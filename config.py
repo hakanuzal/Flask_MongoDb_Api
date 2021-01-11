@@ -1,7 +1,9 @@
-"""This module is to configure app to connect with database."""
+"""Bu modül, uygulamayı veritabanına bağlanacak şekilde yapılandırmak içindir."""
 
 from pymongo import MongoClient
 
-DATABASE = MongoClient()['restfulapi'] # DB_NAME
+# CONNECTION_STRING = "mongodb+srv://hakan:hakanuzal22.@cluster0.ink0b.mongodb.net/dispatchdb?retryWrites=true&w=majority"
+
 DEBUG = True
-client = MongoClient('localhost', 27017)
+client = MongoClient('mongodb+srv://hakanuzal:hakanuzal22.@cluster0.ic1qs.mongodb.net/dispatchdb?retryWrites=true&w=majority',maxPoolSize=50, connect=False)
+
